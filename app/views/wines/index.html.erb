@@ -1,6 +1,10 @@
 <h1><%= pluralize(@wines.size, 'wine') %></h1>
+
 <ol>
 	<% @wines.each do |wine| %>
 	<li><%= link_to(wine.name, wine) %></li>
 	<% end %>
 </ol>
+
+
+<%= link_to 'New Wine', new_wine_path %>
