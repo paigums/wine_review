@@ -24,7 +24,7 @@ end
 def create
 	@wine = Wine.new(wine_params)
 	if @wine.save
-      redirect_to @wine
+      redirect_to @wine, notice: "#{@wine.name} was created!"
     else
       render :new
     end
@@ -39,7 +39,7 @@ end
 def update
 #This is empty now @wine = Wine.find(params[:id])
 	if @wine.update(wine_params)
-	redirect_to @wine
+	redirect_to @wine, notice: "#{@wine.name} was created!"
     else
       render :new
     end
