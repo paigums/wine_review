@@ -56,7 +56,7 @@ end
 private
 
 def wine_params
-params.require(:wine).permit(:name, :year, :winery, :country, :varietal)
+params.require(:wine).permit(:name, :year, :winery, :country, :varietal, :price)
 end
 
 def set_wine

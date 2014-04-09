@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140331010031) do
     t.string   "winery"
     t.string   "country"
     t.string   "varietal"
+    t.integer   "price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
