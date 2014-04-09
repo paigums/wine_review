@@ -1,4 +1,5 @@
 <h1><%= pluralize(@wines.size, 'wine') %></h1>
+<%= page_entries_info @wines %>
 
 <ol>
 	<% @wines.each do |wine| %>
@@ -6,5 +7,7 @@
 	<% end %>
 </ol>
 
+<%= paginate @wines %>
 
-<%= link_to 'New Wine', new_wine_path %>
+
+<!-- <%= link_to 'New Wine', new_wine_path %> -->
