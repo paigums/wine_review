@@ -1,6 +1,7 @@
 class Wine < ActiveRecord::Base
+	VARIETALS = ['Pinot Grigio', 'Champagne', 'Pinot Noir', 'Box of Wine', 'Cabernet Sauvignon', 'Moscato' ]
 	scope :bargains, -> { where('price < 16.00') }
-scope :by, ->(author) { where('varietal = ?', varietal) }
+	scope :by, ->(author) { where('varietal = ?', varietal) }
 	validates :name, :year, :winery, :country, :varietal, :price, presence: true
 	validates :year,
 	numericality: { only_integer: true, greater_than_or_equal_to: 0 },

@@ -3,7 +3,7 @@
 
 <%= render 'shared/validation_errors', object: @wine %>
 
-  <%= f.label :name %> <%= f.text_field :name, autofocus: true %><br />
+   <%= f.label :name %> <%= f.text_field :name, autofocus: true %><br />
 
   <%= f.label :year %> <%= f.text_field :year %><br />
 
@@ -11,9 +11,9 @@
 
   <%= f.label :country %> <%= f.text_field :country %><br />
 
-  <%= f.label :varietal %> <%= f.text_field :varietal %><br />
-
   <%= f.label :price %> <%= f.text_field :price %><br />
+
+  <%= f.label :varietal %> <%= f.select :varietal, Wine::VARIETALS, { prompt: "Pick one" } %>
 
   <p>
     <%= f.submit %>
