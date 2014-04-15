@@ -1,5 +1,7 @@
 WineReview::Application.routes.draw do
 
+  resources :reviews
+
   #resources :wines
 resources :wines do
     get 'page/:page', :action => :index, :on => :collection
