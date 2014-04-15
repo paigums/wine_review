@@ -16,6 +16,7 @@
 	  <%= link_to pluralize(@wine.reviews.size, 'review'), 
 	                        wine_reviews_path(@wine) %>
 	</p>
+	<p><label>Average Review:</label> <%= format_average_stars(@wine) %></p>
 
 </article>
 
