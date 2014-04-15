@@ -1,5 +1,5 @@
 class Wine < ActiveRecord::Base
-	has_many :reviews
+	has_many :reviews, dependent: :destroy
 	VARIETALS = ['Pinot Grigio', 'Champagne', 'Pinot Noir', 'Box of Wine', 'Cabernet Sauvignon', 'Moscato' ]
 	scope :bargains, -> { where('price < 16.00') }
 	scope :by, ->(author) { where('varietal = ?', varietal) }
