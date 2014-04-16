@@ -3,7 +3,6 @@ WineReview::Application.routes.draw do
 
   #resources :wines
 resources :wines do
-    resources :log_entries
     resources :reviews
     get 'page/:page', :action => :index, :on => :collection
 end
