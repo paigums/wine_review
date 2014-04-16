@@ -13,7 +13,7 @@
   <%= f.label :location %>
   <%= f.text_field :location, placeholder: 'Location' %><br />
   <%= f.label :tasted_on %>
-  <%= f.text_field :tasted_on, placeholder: 'Tasted On This Date' %><br />
+  <%= f.date_select :tasted_on, placeholder: 'Tasted On This Date' %><br />
   <p>
     <%= f.submit %>
     <%= link_to 'Cancel', wine_reviews_path(@wine), id: 'cancel_review' %>
