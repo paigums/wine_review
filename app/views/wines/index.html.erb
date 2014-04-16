@@ -3,7 +3,13 @@
 
 <ol>
 	<% @wines.each do |wine| %>
-	<li><%= link_to(wine.name, wine) %></li>
+	<li><%= link_to(wine.name, wine) %>
+  by <%= wine.name %><br/>
+  <%= format_average_stars(wine) %>
+  <% if wine.reviews.any? %>
+    (out of <%= pluralize(wine.reviews.size, 'review') %>)
+  <% end %>
+</li>
 	<% end %>
 </ol>
 

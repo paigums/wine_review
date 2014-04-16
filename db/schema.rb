@@ -11,13 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140415223841) do
+ActiveRecord::Schema.define(version: 20140416004642) do
+
+  create_table "books", force: true do |t|
+    t.string   "name"
+    t.integer  "year"
+    t.string   "winery"
+    t.string   "country"
+    t.decimal  "price"
+    t.string   "varietal"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "log_entries", force: true do |t|
+    t.string   "name"
+    t.integer  "rating"
+    t.string   "location"
+    t.string   "comments"
+    t.datetime "tasted_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "reviews", force: true do |t|
     t.string   "name"
     t.integer  "stars"
     t.text     "comment"
     t.integer  "wine_id"
+    t.datetime "tasted_on"
+    t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -29,8 +52,8 @@ ActiveRecord::Schema.define(version: 20140415223841) do
     t.integer  "year"
     t.string   "winery"
     t.string   "country"
+    t.decimal  "price"
     t.string   "varietal"
-    t.integer  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
