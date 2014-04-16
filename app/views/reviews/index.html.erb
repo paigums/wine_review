@@ -15,5 +15,12 @@
 </ol>
 
 
-<%= link_to 'Write a Review', new_wine_review_path(@wine) %>
+
+<%= link_to 'Write a Review', new_wine_review_path(@wine),
+        remote: true,
+        data: { 'update-target' => 'review_form_container' },
+        class: 'btn btn-primary' %>
+
+<div id="review_form_container"></div>
+
 
