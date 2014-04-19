@@ -1,9 +1,11 @@
-WineReview::Application.routes.draw do
+WineLogEntry::Application.routes.draw do
 
+
+  #resources :log_entries
 
   #resources :wines
 resources :wines do
-    resources :reviews
+    resources :log_entries
     get 'page/:page', :action => :index, :on => :collection
 end
 

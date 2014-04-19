@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-WineReview::Application.load_tasks
+WineLogEntry::Application.load_tasks

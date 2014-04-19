@@ -13,10 +13,10 @@
 	<p><label>Price:</label> <%= number_to_currency(@wine.price) %></p>
 	<p>
 	  Read all
-	  <%= link_to pluralize(@wine.reviews.size, 'review'), 
-	                        wine_reviews_path(@wine) %>
+	  <%= link_to pluralize(@wine.log_entries.size, 'log_entry'), 
+	                        wine_log_entries_path(@wine) %>
 	</p>
-	<p><label>Average Review:</label> <%= format_average_stars(@wine) %></p>
+	<p><label>Average Rating:</label> <%= format_average_ratings(@wine) %></p>
 
 </article>
 

@@ -6,6 +6,7 @@ one:
   winery: MyString
   country: MyString
   varietal: MyString
+  price: 9.99
 
 two:
   name: MyString
@@ -13,3 +14,4 @@ two:
   winery: MyString
   country: MyString
   varietal: MyString
+  price: 9.99
