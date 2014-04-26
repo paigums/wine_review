@@ -16,7 +16,7 @@
 	  <%= link_to pluralize(@wine.log_entries.size, 'log_entry'), 
 	                        wine_log_entries_path(@wine) %>
 	</p>
-	<p><label>Average Rating:</label> <%= format_average_ratings(@wine) %></p>
+	<p><label>Average Rating:</label> <%= format_average_rating(@wine) %></p>
 
 </article>
 

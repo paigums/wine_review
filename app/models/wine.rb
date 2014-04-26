@@ -10,11 +10,14 @@ validates :price,
     numericality: { greater_than_or_equal_to: 0 },
     if: "price.present?"
 
-	def average_ratings
-	if log_entries.loaded?
-	log_entries.map(&:rating).compact.average
-	else
-	log_entries.average(:rating)
+	def average_rating
+	  log_entries.average(:rating)
 	end
-	end
+#	def average_ratings
+#		if log_entries.loaded?
+#		log_entries.map(&:rating).compact.average
+#		else
+#		log_entries.average(:rating)
+#		end
+	#end
 end

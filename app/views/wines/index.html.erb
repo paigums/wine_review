@@ -5,7 +5,7 @@
 	<% @wines.each do |wine| %>
 	<li><%= link_to(wine.name, wine) %>
   by <%= wine.name %><br/>
-  <%= format_average_ratings(wine) %>
+  <%= format_average_rating(wine) %>
   <% if wine.log_entries.any? %>
     (out of <%= pluralize(wine.log_entries.size, 'log_entry') %>)
   <% end %>

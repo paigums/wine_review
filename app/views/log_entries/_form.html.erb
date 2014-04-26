@@ -5,7 +5,7 @@
   <%= f.label :name %>
   <%= f.text_field :name, autofocus: true, placeholder: 'Name' %><br />
   <%= f.label :rating %>  
-  <% LogEntry::STARS.each do |rating| %>
+  <% LogEntry::RATING.each do |rating| %>
     <%= f.radio_button :rating, rating %> <%= rating %>
   <% end %><br />
   <%= f.label :comments %><br/>
@@ -13,7 +13,7 @@
   <%= f.label :location %>
   <%= f.text_field :location, placeholder: 'Location' %><br />
   <%= f.label :tasted_on %>
-  <%= f.date_select :tasted_on, placeholder: 'Tasted On This Date' %><br />
+  <%= f.date_select :tasted_on, placeholder: 'Tasted On' %><br />
   <p>
     <%= f.submit %>
     <%= link_to 'Cancel', wine_log_entries_path(@wine), id: 'cancel_log_entry' %>
