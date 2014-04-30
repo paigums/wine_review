@@ -7,7 +7,7 @@
   by <%= wine.winery %><br/>
   <%= format_average_rating(wine) %>
   <% if wine.log_entries.any? %>
-    (out of <%= pluralize(wine.log_entries.size, 'log_entry') %>)
+    (out of <%= pluralize(wine.log_entries.size, 'log entry') %>)
   <% end %>
 </li>
 	<% end %>
