@@ -1,6 +1,5 @@
 class Wine < ActiveRecord::Base
 
-
 has_many :log_entries, dependent: :destroy
 VARIETALS = ['Pinot Grigio', 'Champagne', 'Pinot Noir', 'Box of Wine', 'Cabernet Sauvignon', 'Moscato' ]
 scope :bargains, -> { where('price < 15.00') }
@@ -12,6 +11,7 @@ validates :year,
 validates :price,
     numericality: { greater_than_or_equal_to: 0 },
     if: "price.present?"
+validates :varietal, inclusion: { in: VARIETALS, message: "Must be Valid" }
 
 	def average_rating
 	  log_entries.average(:rating)
